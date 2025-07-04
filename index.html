@@ -8,21 +8,46 @@
 </head>
 <body class="bg-black text-white font-sans">
 
-  <!-- 🧠 NAVBAR -->
-  <header class="flex justify-between items-center px-6 py-4 bg-zinc-900 shadow-md">
-    <h1 class="text-2xl font-bold text-white">VISTORA</h1>
-    <nav class="space-x-6">
-      <a href="#landing" class="hover:text-yellow-400">Landing Zone</a>
-      <a href="#jepretan" class="hover:text-yellow-400">Jepretan</a>
-      <a href="#gerak-visual" class="hover:text-yellow-400">Gerak Visual</a>
-      <a href="#berita" class="hover:text-yellow-400">Berita</a>
-      <a href="#desain" class="hover:text-yellow-400">Desain</a>
-      <a href="#digital" class="hover:text-yellow-400">Digital</a>
+  <!-- HEADER -->
+  <header class="flex items-center justify-between px-6 py-4 bg-zinc-900 shadow">
+    <h1 class="text-2xl font-bold tracking-wide">VISTORA</h1>
+    <nav class="space-x-4">
+      <a href="#landing" class="hover:text-gray-400">Landing Zone</a>
+      <a href="#jepretan" class="hover:text-gray-400">Jepretan</a>
+      <a href="#gerak" class="hover:text-gray-400">Gerak</a>
+      <a href="#berita" class="hover:text-gray-400">Berita</a>
+      <a href="#arsip" class="hover:text-gray-400">Arsip</a>
+      <a href="#strategi" class="hover:text-gray-400">Strategi</a>
     </nav>
   </header>
 
-  <!-- 👋 SELAMAT DATANG -->
-  <section id="landing" class="text-center py-12 px-4 bg-zinc-950">
+  <!-- HERO / LANDING ZONE -->
+  <section id="landing" class="text-center py-20 px-6">
     <h2 class="text-4xl font-extrabold mb-4">Selamat Datang di Vistora Production</h2>
     <p class="text-lg font-bold text-gray-300">
-      KREATIVITAS DALAM PRODUKSI <span class="text-yellow-400">VIDEO</span>, <span class="text-yellow-400">FOTO</span>, <span class="text-yellow
+      KREATIVITAS DALAM PRODUKSI VIDEO, FOTO, BERITA, DAN DIGITAL MARKETING.
+    </p>
+  </section>
+
+  <!-- SLIDESHOW -->
+  <section id="slider" class="relative w-full overflow-hidden">
+    <div id="slides" class="flex transition-transform duration-700 ease-in-out w-[300%]">
+      <img src="slides/1.png" class="w-full h-96 object-cover" alt="Slide 1">
+      <img src="slides/2.png" class="w-full h-96 object-cover" alt="Slide 2">
+      <img src="slides/3.png" class="w-full h-96 object-cover" alt="Slide 3">
+    </div>
+  </section>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+
+    setInterval(() => {
+      slideIndex = (slideIndex + 1) % totalSlides;
+      slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }, 3000);
+  </script>
+
+</body>
+</html>

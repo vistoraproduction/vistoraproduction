@@ -1,57 +1,28 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vistora Production</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: sans-serif;
-    }
-    #slides {
-      width: 300%;
-    }
-    #slides img {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="text-white">
+<body class="bg-black text-white font-sans">
 
-  <!-- Header -->
-  <header class="text-center py-6">
-    <h1 class="text-4xl font-bold">Vistora Production</h1>
-    <p class="text-xl mt-2">Berkarya Bersama</p>
+  <!-- 🧠 NAVBAR -->
+  <header class="flex justify-between items-center px-6 py-4 bg-zinc-900 shadow-md">
+    <h1 class="text-2xl font-bold text-white">VISTORA</h1>
+    <nav class="space-x-6">
+      <a href="#landing" class="hover:text-yellow-400">Landing Zone</a>
+      <a href="#jepretan" class="hover:text-yellow-400">Jepretan</a>
+      <a href="#gerak-visual" class="hover:text-yellow-400">Gerak Visual</a>
+      <a href="#berita" class="hover:text-yellow-400">Berita</a>
+      <a href="#desain" class="hover:text-yellow-400">Desain</a>
+      <a href="#digital" class="hover:text-yellow-400">Digital</a>
+    </nav>
   </header>
 
-  <!-- Slider -->
-  <section id="slider" class="relative w-full overflow-hidden">
-    <div id="slides" class="flex transition-transform duration-700 ease-in-out">
-      <img src="1.png" alt="Slide 1">
-      <img src="2.png" alt="Slide 2">
-      <img src="3.png" alt="Slide 3">
-    </div>
-  </section>
-
-  <!-- Auto Slide Script -->
-  <script>
-    let index = 0;
-    const slides = document.getElementById('slides');
-    setInterval(() => {
-      index = (index + 1) % 3;
-      slides.style.transform = `translateX(-${index * 100}%)`;
-    }, 3000);
-  </script>
-
-  <!-- Footer -->
-  <footer class="text-center py-6 mt-10 text-gray-400">
-    © 2025 Vistora Production. All rights reserved.
-  </footer>
-
-</body>
-</html>
+  <!-- 👋 SELAMAT DATANG -->
+  <section id="landing" class="text-center py-12 px-4 bg-zinc-950">
+    <h2 class="text-4xl font-extrabold mb-4">Selamat Datang di Vistora Production</h2>
+    <p class="text-lg font-bold text-gray-300">
+      KREATIVITAS DALAM PRODUKSI <span class="text-yellow-400">VIDEO</span>, <span class="text-yellow-400">FOTO</span>, <span class="text-yellow

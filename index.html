@@ -4,80 +4,80 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vistora Production</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
+      color: #eee;
+    }
+  </style>
 </head>
-<body class="bg-black text-white font-sans">
+<body class="min-h-screen">
   <!-- Navbar -->
-  <header class="bg-gray-900 py-4 shadow-md">
-    <nav class="container mx-auto flex justify-between items-center px-6">
-      <h1 class="text-xl font-bold tracking-wider">Vistora</h1>
-      <div class="space-x-4 text-sm">
-        <a href="#beranda" class="hover:text-yellow-400">Beranda</a>
-        <a href="#jepretan" class="hover:text-yellow-400">Jepretan</a>
-        <a href="#gerak-visual" class="hover:text-yellow-400">Gerak Visual</a>
-        <a href="#gaya-tulisan" class="hover:text-yellow-400">Gaya Tulisan</a>
-        <a href="#karya-visual" class="hover:text-yellow-400">Karya Visual</a>
-        <a href="#naik-kelas" class="hover:text-yellow-400">Naik Kelas</a>
-        <a href="#kenalan-dulu" class="hover:text-yellow-400">Kenalan Dulu</a>
-        <a href="#ayo-ngobrol" class="hover:text-yellow-400">Ayo Ngobrol</a>
-      </div>
+  <header class="bg-gray-900 text-white px-6 py-4 flex justify-between items-center">
+    <div class="font-bold text-lg">Vistora</div>
+    <nav class="space-x-4 text-sm">
+      <a href="#jepretan" class="hover:text-gray-300">Jepretan</a>
+      <a href="#gerak" class="hover:text-gray-300">Gerak Visual</a>
+      <a href="#berita" class="hover:text-gray-300">Berita</a>
+      <a href="#visual" class="hover:text-gray-300">Karya Visual</a>
+      <a href="#naik" class="hover:text-gray-300">Naik Kelas</a>
+      <a href="#kenalan" class="hover:text-gray-300">Kenalan Dulu</a>
+      <a href="#kontak" class="hover:text-gray-300">Ayo Ngobrol</a>
     </nav>
   </header>
 
-  <!-- Beranda -->
-  <section id="beranda" class="text-center py-24 px-4">
-    <h2 class="text-4xl font-extrabold mb-4">Selamat Datang di Vistora Production</h2>
-    <p class="text-lg text-gray-300 max-w-xl mx-auto font-semibold">
-      <strong>KREATIVITAS DALAM PRODUKSI VIDEO, FOTO, TYPOGRAFI, DAN DIGITAL MARKETING.</strong>
+  <!-- Hero Section -->
+  <section class="text-center py-20 px-6 bg-black">
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">Selamat Datang di Vistora Production</h1>
+    <p class="max-w-2xl mx-auto text-gray-300 text-lg">
+      KREATIVITAS DALAM PRODUKSI VIDEO, FOTO, TYPOGRAFI,<br />
+      DAN DIGITAL MARKETING.
     </p>
   </section>
 
-  <!-- Jepretan -->
-  <section id="jepretan" class="py-20 px-6 bg-gray-800">
-    <h2 class="text-3xl font-bold mb-6">Jepretan</h2>
-    <p class="text-gray-400">Kumpulan karya fotografi dengan sudut pandang unik dan storytelling visual yang kuat.</p>
+  <!-- Section: Jepretan -->
+  <section id="jepretan" class="bg-gray-800 p-8">
+    <h2 class="text-2xl font-semibold mb-2">📸 Jepretan</h2>
+    <p class="text-gray-300">Kumpulan karya fotografi dengan sudut pandang unik dan storytelling visual yang kuat.</p>
   </section>
 
-  <!-- Gerak Visual -->
-  <section id="gerak-visual" class="py-20 px-6">
-    <h2 class="text-3xl font-bold mb-6">Gerak Visual</h2>
-    <p class="text-gray-400">Video kreatif, cinematic shots, dan karya visual yang bikin lo bilang “GILA KEREN.”</p>
+  <!-- Section: Gerak Visual -->
+  <section id="gerak" class="bg-gray-900 p-8">
+    <h2 class="text-2xl font-semibold mb-2">🎬 Gerak Visual</h2>
+    <p class="text-gray-300">Video kreatif, cinematic shots, dan karya visual yang bikin lo bilang “GILA KEREN.”</p>
   </section>
 
-  <!-- Gaya Tulisan -->
-  <section id="gaya-tulisan" class="py-20 px-6 bg-gray-800">
-    <h2 class="text-3xl font-bold mb-6">Gaya Tulisan</h2>
-    <p class="text-gray-400">Eksperimen tipografi dan kata-kata visual yang jadi identitas kuat sebuah brand.</p>
+  <!-- Section: Berita -->
+  <section id="berita" class="bg-gray-800 p-8">
+    <h2 class="text-2xl font-semibold mb-2">📰 Berita</h2>
+    <p class="text-gray-300">Typography dan desain info yang clean, buat info lo kebaca tapi tetap kece.</p>
   </section>
 
-  <!-- Karya Visual -->
-  <section id="karya-visual" class="py-20 px-6">
-    <h2 class="text-3xl font-bold mb-6">Karya Visual</h2>
-    <p class="text-gray-400">Desain grafis yang nyatuin warna, bentuk, dan pesan jadi satu kesatuan visual yang impactful.</p>
+  <!-- Section: Karya Visual -->
+  <section id="visual" class="bg-gray-900 p-8">
+    <h2 class="text-2xl font-semibold mb-2">🎨 Karya Visual</h2>
+    <p class="text-gray-300">Grafis, branding, konten kreatif yang visualnya nempel di kepala audiens lo.</p>
   </section>
 
-  <!-- Naik Kelas -->
-  <section id="naik-kelas" class="py-20 px-6 bg-gray-800">
-    <h2 class="text-3xl font-bold mb-6">Naik Kelas</h2>
-    <p class="text-gray-400">Strategi digital yang bantu brand lo grow, dikenal, dan pastinya naik kelas di mata netizen.</p>
+  <!-- Section: Naik Kelas -->
+  <section id="naik" class="bg-gray-800 p-8">
+    <h2 class="text-2xl font-semibold mb-2">🚀 Naik Kelas</h2>
+    <p class="text-gray-300">Digital marketing & campaign biar brand lo naik kelas dan dapet exposure maksimal.</p>
   </section>
 
-  <!-- Kenalan Dulu -->
-  <section id="kenalan-dulu" class="py-20 px-6">
-    <h2 class="text-3xl font-bold mb-6">Kenalan Dulu</h2>
-    <p class="text-gray-400">Kita adalah tim kreatif penuh semangat yang hidup buat bikin karya keren. Yuk kenalan!</p>
+  <!-- Section: Kenalan Dulu -->
+  <section id="kenalan" class="bg-gray-900 p-8">
+    <h2 class="text-2xl font-semibold mb-2">👋 Kenalan Dulu</h2>
+    <p class="text-gray-300">Yuk kenalan, ngobrolin ide, dan liat gimana kita bisa bantuin konten lo makin solid.</p>
   </section>
 
-  <!-- Ayo Ngobrol -->
-  <section id="ayo-ngobrol" class="py-20 px-6 bg-gray-800">
-    <h2 class="text-3xl font-bold mb-6">Ayo Ngobrol</h2>
-    <p class="text-gray-400 mb-4">Punya ide? Mau collab? Langsung aja hubungi kita!</p>
-    <a href="mailto:vistoraproduction@gmail.com" class="inline-block mt-2 bg-yellow-400 text-black py-2 px-6 rounded-full font-semibold hover:bg-yellow-500 transition">Email Kami</a>
+  <!-- Section: Ayo Ngobrol -->
+  <section id="kontak" class="bg-gray-800 p-8">
+    <h2 class="text-2xl font-semibold mb-2">📩 Ayo Ngobrol</h2>
+    <p class="text-gray-300">Hubungi kita kapan aja buat diskusi atau mulai project bareng.</p>
   </section>
-
-  <!-- Footer -->
-  <footer class="text-center py-8 text-gray-500 text-sm">
-    &copy; 2025 Vistora Production. All rights reserved.
-  </footer>
 </body>
 </html>

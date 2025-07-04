@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vistora Slide Ruby</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- HEADER -->
+  <header class="flex justify-between items-center px-6 py-4 bg-zinc-900">
+    <h1 class="text-2xl font-bold">VISTORA</h1>
+    <nav class="space-x-4">
+      <a href="#landing">Landing</a>
+      <a href="#jepretan">Jepretan</a>
+      <a href="#gerak">Gerak</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="landing" class="text-center py-16 px-4">
+    <h2 class="text-4xl font-bold mb-4">Selamat Datang</h2>
+    <p class="text-lg">
+      <ruby>
+        Kreativitas<rt>tanpa batas</rt>
+      </ruby>
+      <ruby>
+        dalam<rt>passion</rt>
+      </ruby>
+      <ruby>
+        produksi<rt>ekspresi visual</rt>
+      </ruby>
+      modern.
+    </p>
+  </section>
+
+  <!-- SLIDESHOW -->
+  <section class="relative overflow-hidden w-full">
+    <div id="slides" class="flex transition-transform duration-700 ease-in-out w-[300%]">
+      <img src="slides/1.png" class="w-full h-96 object-cover" alt="Slide 1">
+      <img src="slides/2.png" class="w-full h-96 object-cover" alt="Slide 2">
+      <img src="slides/3.png" class="w-full h-96 object-cover" alt="Slide 3">
+    </div>
+  </section>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+
+    setInterval(() => {
+      slideIndex = (slideIndex + 1) % totalSlides;
+      slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }, 3000);
+  </script>
+
+</body>
+</html>

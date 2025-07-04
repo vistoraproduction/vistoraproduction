@@ -4,159 +4,76 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vistora Production</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-      font-family: 'Orbitron', sans-serif;
-      color: #f1f1f1;
-    }
-
-    body {
-      background-color: #0e1015;
-    }
-
-    nav {
-      background-color: #1a1d2a;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 32px;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    nav .logo {
-      font-size: 1.2em;
-      font-weight: bold;
-    }
-
-    nav a {
-      color: #f1f1f1;
-      margin-left: 20px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #00ffff;
-    }
-
-    header {
-      background-color: #000;
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1em;
-      max-width: 600px;
-      margin: 0 auto;
-      color: #cfcfcf;
-      letter-spacing: 1px;
-    }
-
-    section {
-      padding: 80px 32px;
-      border-bottom: 1px solid #222;
-    }
-
-    section h2 {
-      font-size: 1.8em;
-      margin-bottom: 12px;
-    }
-
-    section p {
-      font-size: 1em;
-      max-width: 800px;
-      color: #c9c9c9;
-    }
-
-    footer {
-      background-color: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9em;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-black text-white font-sans">
 
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">Vistora</div>
-    <div>
-      <a href="#jepretan">Jepretan</a>
-      <a href="#gerakvisual">Gerak Visual</a>
-      <a href="#berita">Berita</a>
-      <a href="#karyavisual">Karya Visual</a>
-      <a href="#naikkelas">Naik Kelas</a>
-      <a href="#kenalan">Kenalan Dulu</a>
-      <a href="#kontak">Ayo Ngobrol</a>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header>
-    <h1>Selamat Datang di Vistora Production</h1>
-    <p>KREATIVITAS DALAM PRODUKSI VIDEO, FOTO, TYPOGRAFI, DAN DIGITAL MARKETING.</p>
+  <!-- 🧠 NAVBAR -->
+  <header class="flex justify-between items-center px-6 py-4 bg-zinc-900 shadow-md">
+    <h1 class="text-2xl font-bold text-white">VISTORA</h1>
+    <nav class="space-x-6">
+      <a href="#landing" class="hover:text-yellow-400">Landing Zone</a>
+      <a href="#jepretan" class="hover:text-yellow-400">Jepretan</a>
+      <a href="#gerak-visual" class="hover:text-yellow-400">Gerak Visual</a>
+      <a href="#berita" class="hover:text-yellow-400">Berita</a>
+      <a href="#desain" class="hover:text-yellow-400">Desain</a>
+      <a href="#digital" class="hover:text-yellow-400">Digital</a>
+    </nav>
   </header>
 
-  <!-- Section: Jepretan -->
-  <section id="jepretan">
-    <h2>📸 Jepretan</h2>
-    <p>Kumpulan karya fotografi dengan sudut pandang unik dan storytelling visual yang kuat.</p>
+  <!-- 👋 SELAMAT DATANG -->
+  <section id="landing" class="text-center py-12 px-4 bg-zinc-950">
+    <h2 class="text-4xl font-extrabold mb-4">Selamat Datang di Vistora Production</h2>
+    <p class="text-lg font-bold text-gray-300">
+      KREATIVITAS DALAM PRODUKSI <span class="text-yellow-400">VIDEO</span>, <span class="text-yellow-400">FOTO</span>, <span class="text-yellow-400">BERITA</span>, <span class="text-yellow-400">DESAIN</span>, & <span class="text-yellow-400">DIGITAL MARKETING</span>.
+    </p>
   </section>
 
-  <!-- Section: Gerak Visual -->
-  <section id="gerakvisual">
-    <h2>🎥 Gerak Visual</h2>
-    <p>Video kreatif, cinematic shots, dan karya visual yang bikin lo bilang “GILA KEREN.”</p>
+  <!-- 🎬 SLIDESHOW -->
+  <section class="relative w-full overflow-hidden mt-4" id="slider">
+    <div id="slides" class="flex transition-transform duration-700 ease-in-out w-[300%]">
+      <img src="slides/1.png" class="w-full h-80 object-cover" alt="Slide 1">
+      <img src="slides/2.png" class="w-full h-80 object-cover" alt="Slide 2">
+      <img src="slides/3.png" class="w-full h-80 object-cover" alt="Slide 3">
+    </div>
   </section>
 
-  <!-- Section: Berita -->
-  <section id="berita">
-    <h2>📰 Berita</h2>
-    <p>Update terbaru dari dunia kreatif, behind-the-scene project, dan hal menarik seputar industri visual.</p>
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+
+    setInterval(() => {
+      slideIndex = (slideIndex + 1) % totalSlides;
+      slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }, 3000);
+  </script>
+
+  <!-- 🔻 SECTIONS KOSONG (Isi Nanti) -->
+  <section id="jepretan" class="p-10">
+    <h2 class="text-3xl font-bold mb-4">📸 Jepretan</h2>
+    <p class="text-gray-400">Kumpulan karya foto dari Vistora. (Isi konten di sini)</p>
   </section>
 
-  <!-- Section: Karya Visual -->
-  <section id="karyavisual">
-    <h2>🎨 Karya Visual</h2>
-    <p>Kompilasi karya-karya terbaik Vistora yang nunjukin identitas dan karakter brand lo.</p>
+  <section id="gerak-visual" class="p-10">
+    <h2 class="text-3xl font-bold mb-4">🎥 Gerak Visual</h2>
+    <p class="text-gray-400">Video & sinematik produksi. (Isi konten di sini)</p>
   </section>
 
-  <!-- Section: Naik Kelas -->
-  <section id="naikkelas">
-    <h2>🚀 Naik Kelas</h2>
-    <p>Layanan branding dan digital marketing biar brand lo naik kelas, makin dikenal, dan makin dipercaya.</p>
+  <section id="berita" class="p-10">
+    <h2 class="text-3xl font-bold mb-4">📰 Berita</h2>
+    <p class="text-gray-400">Update, artikel, dan kabar terbaru. (Isi konten di sini)</p>
   </section>
 
-  <!-- Section: Kenalan Dulu -->
-  <section id="kenalan">
-    <h2>👋 Kenalan Dulu</h2>
-    <p>Cerita di balik layar Vistora — siapa kami, kenapa kami berdiri, dan visi misi kami dalam berkarya.</p>
+  <section id="desain" class="p-10">
+    <h2 class="text-3xl font-bold mb-4">🎨 Desain</h2>
+    <p class="text-gray-400">Typografi, branding, dan visual art. (Isi konten di sini)</p>
   </section>
 
-  <!-- Section: Ayo Ngobrol -->
-  <section id="kontak">
-    <h2>💬 Ayo Ngobrol</h2>
-    <p>Punya ide? Butuh partner kreatif? Kontak kami sekarang dan mari bikin sesuatu yang keren bareng-bareng!</p>
+  <section id="digital" class="p-10">
+    <h2 class="text-3xl font-bold mb-4">📱 Digital</h2>
+    <p class="text-gray-400">Strategi digital marketing Vistora. (Isi konten di sini)</p>
   </section>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Vistora Production. All rights reserved.
-  </footer>
 
 </body>
 </html>
